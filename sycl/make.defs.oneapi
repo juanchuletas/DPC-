@@ -1,0 +1,8 @@
+CXXFLAGS=-g -O3 -std=c++17
+#
+# Intel DPC++
+#
+SYCLCXX= /usr/local/DPCPP/llvm/build/bin/clang++
+SYCLFLAG=${CXXFLAGS}
+SYCLFLAG+=-fsycl -DDPCPP
+SYCLFLAG+=-fsycl-targets=nvptx64-nvidia-cuda-sycldevice -DDPCPP_CUDA
